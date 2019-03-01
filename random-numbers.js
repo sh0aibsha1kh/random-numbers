@@ -1,30 +1,12 @@
 const randomNumbers = function random_numbers(n) {
-    let zero = 0
-    let one = 0
-    let two = 0
-    let three = 0
-    let four = 0
-    let five = 0
-    let six = 0
-    let seven = 0
-    let eight = 0
-    let nine = 0
-    let i = 0
+    let numbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let i = 0;
     while (i < n) {
         let r = Math.floor((Math.random() * 10));
-        if (r == 0) { zero += 1 }
-        else if (r == 1) { one += 1 }
-        else if (r == 2) { two += 1 }
-        else if (r == 3) { three += 1 }
-        else if (r == 4) { four += 1 }
-        else if (r == 5) { five += 1 }
-        else if (r == 6) { six += 1 }
-        else if (r == 7) { seven += 1 }
-        else if (r == 8) { eight += 1 }
-        else if (r == 9) { nine += 1 }
+        numbers[r] += 1;
         i += 1
     }
-    return [zero, one, two, three, four, five, six, seven, eight, nine]
+    return numbers
 }
 
 let r;
