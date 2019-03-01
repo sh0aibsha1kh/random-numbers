@@ -1,5 +1,6 @@
 import random
 import sys
+import time
 
 
 def random_numbers(n):
@@ -13,6 +14,7 @@ def random_numbers(n):
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     if len(sys.argv) == 1:
         r = random_numbers(10)
     else:
@@ -27,3 +29,4 @@ if __name__ == "__main__":
           "\n7: " + str(r[7]) +
           "\n8: " + str(r[8]) +
           "\n9: " + str(r[9]))
+    print("Executed in %.0f milliseconds." % ((time.time() - start_time) * 1000))
